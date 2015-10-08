@@ -58,13 +58,13 @@ class Chef
 
       normalized_scope = normalize_scope(scope)
 
-      case normalized_scope
-      when ['global', 'ipv4']
-        ips << node['cloud']['public_ipv4'] if node['cloud'] && node['cloud']['public_ipv4']
-      when ['ipv4', 'private']
-        ips << node['cloud']['local_ipv4'] if node['cloud'] && node['cloud']['local_ipv4']
-        ips << node['privateaddress'] if node['privateaddress']
-      end
+      # case normalized_scope
+      # when ['global', 'ipv4']
+      #   ips << node['cloud']['public_ipv4'] if node['cloud'] && node['cloud']['public_ipv4']
+      # when ['ipv4', 'private']
+      #   ips << node['cloud']['local_ipv4'] if node['cloud'] && node['cloud']['local_ipv4']
+      #   ips << node['privateaddress'] if node['privateaddress']
+      # end
 
       if node['network'] && node['network']['interfaces']
         node['network']['interfaces'].each do |ifce, attrs|
