@@ -1,4 +1,4 @@
-chef_gem "ipaddr_extensions" do
-  version '1.0.0'
+chef_gem 'ipaddr_extensions' do
+  version '1.0.2'
+  compile_time true
 end
-
